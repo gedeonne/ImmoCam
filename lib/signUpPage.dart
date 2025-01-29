@@ -129,7 +129,11 @@ class _SignUpPageState extends State<SignUpPage> {
               hintext: 'Nom complet',
               onChange: (value){
                 setState(() {
-                  name = value;
+                  if (value == ""){
+                    name = null;
+                  }else{
+                    name = value;
+                  }
                 });
               },
             ),
@@ -139,7 +143,11 @@ class _SignUpPageState extends State<SignUpPage> {
                 hintext: 'Email',
                 onChange: (value){
                   setState(() {
-                    email = value;
+                    if (value == ""){
+                      email = null;
+                    }else{
+                      email = value;
+                    }
                   });
                 },
             ),
@@ -150,7 +158,11 @@ class _SignUpPageState extends State<SignUpPage> {
               isPassword: true,
               onChange: (value){
                 setState(() {
-                  password = value;
+                  if (value == ""){
+                    password = null;
+                  }else{
+                    password = value;
+                  }
                 });
               },
             ),
@@ -167,7 +179,11 @@ class _SignUpPageState extends State<SignUpPage> {
               hintext: 'Numéro de téléphone',
               onChange: (value){
                 setState(() {
-                  phone = value;
+                  if (value == ""){
+                    phone = null;
+                  }else{
+                    phone = value;
+                  }
                 });
               },
             ),

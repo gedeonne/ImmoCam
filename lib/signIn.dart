@@ -118,7 +118,11 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
                 hintext: 'Nom',
                 onChange: (value){
                   setState(() {
-                    name = value;
+                    if (value == ""){
+                      name = null;
+                    }else{
+                      name = value;
+                    }
                   });
                 },
               ),
@@ -131,7 +135,11 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
                 isPassword: true,
                 onChange: (value){
                   setState(() {
-                    password = value;
+                    if (value == ""){
+                      password = null;
+                    }else{
+                      password = value;
+                    }
                   });
                 },
               ),
