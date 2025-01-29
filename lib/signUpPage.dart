@@ -122,35 +122,47 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
               ),
             ),
-            SizedBox(height: 70),
+            const SizedBox(height: 70),
             // Champs de texte
             NeumorphismTextfield(
               controller: nameController,
               hintext: 'Nom complet',
               onChange: (value){
                 setState(() {
-                  name = value;
+                  if(value == ""){
+                    name = null;
+                  }else{
+                    name = value;
+                  }
                 });
               },
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             NeumorphismTextfield(
                 controller: emailController,
                 hintext: 'Email',
                 onChange: (value){
                   setState(() {
-                    email = value;
+                    if(value == ""){
+                      email = null;
+                    }else{
+                      email = value;
+                    }
                   });
                 },
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             NeumorphismTextfield(
               controller: passwordController,
               hintext: 'Mot de passe',
               isPassword: true,
               onChange: (value){
                 setState(() {
-                  password = value;
+                  if(value == ""){
+                    password = null;
+                  }else{
+                    password = value;
+                  }
                 });
               },
             ),
