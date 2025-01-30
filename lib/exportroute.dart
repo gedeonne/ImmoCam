@@ -1,4 +1,4 @@
-export 'home/home_screen.dart';
-export 'package:immo/changeMotDePass.dart';
-export 'package:immo/signIn.dart';
-export 'package:immo/signUpPage.dart';
+export 'views/home/home_screen.dart';
+export 'package:immo/views/authviews/changeMotDePass.dart';
+export 'package:immo/views/authviews/signIn.dart';
+export 'package:immo/views/authviews/signUpPage.dart';

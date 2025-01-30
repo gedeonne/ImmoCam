@@ -21,17 +21,17 @@ class _AppBarCustomState extends State<AppBarCustom> {
           AnimatedContainer(
             alignment: Alignment.center,
             height: 42,
-            width: isOpened ? 42 : 100,
+            width: isOpened ? 62 : 100,
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(32),
                 boxShadow: kElevationToShadow[2]
             ),
-            duration: const Duration(milliseconds: 500),
+            duration: const Duration(milliseconds: 900),
             child: isOpened ? const Icon(Icons.home, color: Colors.blue,)
                 :
-            const Text("IMMO",
-              style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold, fontSize: 20),
+            Text(isOpened ? "I" : "IMMO",
+              style: const TextStyle(color: Colors.blue, fontWeight: FontWeight.bold, fontSize: 20, fontFamily: "grandis"),
             ),
           ),
           Row(
@@ -54,7 +54,7 @@ class _AppBarCustomState extends State<AppBarCustom> {
                           style: TextStyle(color: Colors.blue),
                           decoration: InputDecoration(
                               hintText: "Search...",
-                              hintStyle: TextStyle(color: Colors.blue),
+                              hintStyle: TextStyle(color: Colors.blue,fontFamily: "petit"),
                               border: InputBorder.none
                           ),
                         ),
