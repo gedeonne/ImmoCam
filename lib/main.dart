@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:immo/changeMotDePass.dart';
-import 'package:immo/signIn.dart';
-
-import 'signUpPage.dart';
+import 'package:immo/exportroute.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,11 +10,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/',
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/home_screen',
       routes: {
         '/': (context) => const LoginPage(),
         '/signup': (context) => SignUpPage(),
-        '/changemotdepass': (context) => ChangePasswordPage(),
+        '/changemotdepass': (context) => const ChangePasswordPage(),
+        '/home_screen':(context) => const HomeScreen()
       },
 
     );
