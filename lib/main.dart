@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:immo/changeMotDePass.dart';
 import 'package:immo/signIn.dart';
 
+import 'bienDici.dart';
 import 'signUpPage.dart';
 
 void main() {
@@ -15,9 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => LoginPage(),
+        '/': (context) => RealEstatePage(),
         '/signup': (context) => SignUpPage(),
         '/changemotdepass': (context) => ChangePasswordPage(),
+        '/signin': (context) => LoginPage()
       },
 
     );

@@ -178,6 +178,7 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
                           setState(() {
                             isLoading = !isLoading;
                           });
+                          Navigator.pushNamed(context, '/biendici');
                         }
                     );
                   }
