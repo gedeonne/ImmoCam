@@ -16,7 +16,7 @@ class _MenuburgerState extends State<Menuburger> {
       child: ListView(
         children: [
           DrawerHeader(
-            decoration: BoxDecoration(color: Colors.blue),
+            decoration: BoxDecoration(color: Colors.purple),
             child: Text('Menu', style: TextStyle(color: Colors.white, fontSize: 24)),
           ),
           ListTile(

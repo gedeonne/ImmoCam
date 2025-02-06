@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:immo/changeMotDePass.dart';
+import 'package:immo/DetailPage.dart';
 import 'package:immo/signIn.dart';
 
 import 'bienDici.dart';
@@ -19,10 +20,13 @@ class MyApp extends StatelessWidget {
         '/': (context) => RealEstatePage(),
         '/signup': (context) => SignUpPage(),
         '/changemotdepass': (context) => ChangePasswordPage(),
-        '/signin': (context) => LoginPage()
+        '/signin': (context) => LoginPage(),
+        '/detailpage': (context) => PropertyDetailPage(),
       },
 
     );
   }
 }
+
+
 

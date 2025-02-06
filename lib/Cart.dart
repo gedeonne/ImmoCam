@@ -1,14 +1,14 @@
-
 import 'package:flutter/material.dart';
 
 class BienImmobilierCard extends StatefulWidget {
   final String image;
   final int photo;
-  final String  title;
+  final String title;
   final String price;
   final bool isExclusive;
 
   const BienImmobilierCard({super.key, required this.image, required this.photo, required this.title, required this.price, required this.isExclusive});
+
   @override
   State<BienImmobilierCard> createState() => _BienImmobilierCardState();
 }
@@ -26,18 +26,22 @@ class _BienImmobilierCardState extends State<BienImmobilierCard> {
               Stack(
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, '/detailpage');
+                    },
                     child: Image.asset(widget.image, height: 200, width: double.infinity, fit: BoxFit.cover),
                   ),
-                  Positioned(
-                    top: 10,
-                    left: 10,
-                    child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                      color: Colors.orange,
-                      child: Text('Annonce à la une', style: TextStyle(color: Colors.white)),
+                  // Affichage de "Annonce à la une" sur les deux premières images
+                  if (widget.image == 'assets/images/1.jpg' || widget.image == 'assets/images/2.jpg')
+                    Positioned(
+                      top: 10,
+                      left: 10,
+                      child: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        color: Colors.purple,  // Violet pour la couleur
+                        child: Text('Annonce à la une', style: TextStyle(color: Colors.white)),
+                      ),
                     ),
-                  ),
                   Positioned(
                     bottom: 10,
                     left: 10,
@@ -56,7 +60,7 @@ class _BienImmobilierCardState extends State<BienImmobilierCard> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(widget.title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                    Text(widget.title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.purple)), // Violet pour le titre
                     Text(widget.price, style: TextStyle(fontSize: 16, color: Colors.green)),
                   ],
                 ),
@@ -73,11 +77,12 @@ class _BienImmobilierCardState extends State<BienImmobilierCard> {
                 child: Text('Exclusivité', style: TextStyle(color: Colors.white)),
               ),
             ),
+          // Positionner l'icône "favorite" en bas au niveau du titre
           Positioned(
-            top: 10,
-            right: 20,
+            bottom: 10,
+            right: 10,
             child: IconButton(
-              icon: Icon(Icons.favorite_border, color: Colors.white),
+              icon: Icon(Icons.favorite_border, color: Colors.purple),  // Icône favorite en violet
               onPressed: () {},
             ),
           ),
