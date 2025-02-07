@@ -109,18 +109,18 @@ class _PropertyDetailPageState extends State<PropertyDetailPage> {
                   fontWeight: FontWeight.bold,
                   color: Colors.purple)), // Titre en violet
           const Text('Superbe appartement en centre-ville',
-              style: TextStyle(fontSize: 16, color: Colors.grey)),
+              style: TextStyle(fontSize: 16, color: Colors.black)),
           const SizedBox(height: 10),
           const Text('Prix: 50 000 000 FCFA',
               style:
-              TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.green)),
+              TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black)),
           const SizedBox(height: 10),
           _buildActionButtons(),
           const SizedBox(height: 20),
           _buildContactOptions(),
           const SizedBox(height: 20),
           const Text("Descriptif de l'appartement",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.purple)), // Titre en violet
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black)), // Titre en violet
           const SizedBox(height: 10),
           const Text(
             "Cet appartement de 120m² est situé en plein centre-ville et offre un cadre de vie exceptionnel. Il dispose de 5 pièces spacieuses, d'une cuisine moderne et d'un grand balcon avec vue dégagée.",
@@ -157,7 +157,7 @@ class _PropertyDetailPageState extends State<PropertyDetailPage> {
           onPressed: () {},
           icon: const Icon(Icons.phone),
           label: const Text('Appeler'),
-          style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+          style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
         ),
       ],
     );
@@ -175,7 +175,7 @@ class _PropertyDetailPageState extends State<PropertyDetailPage> {
             style: TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.bold,
-              color: Colors.purple, // Titre en violet
+              color: Colors.black, // Titre en violet
             ),
           ),
           const SizedBox(height: 10),
@@ -197,12 +197,13 @@ class _PropertyDetailPageState extends State<PropertyDetailPage> {
                   ],
                 ),
               ),
+              SizedBox(width: 10),
               // Deuxième colonne de cartes
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    _buildInfoCard('Estimez votre mensualité', isButton: true),
+                    _buildInfoCard('Estimez votre mensualité',),
                     _buildInfoCard('4 pièces'),
                     _buildInfoCard('Sans travaux à prévoir'),
                     _buildInfoCard('Balcon de 10m²'),
@@ -226,7 +227,7 @@ class _PropertyDetailPageState extends State<PropertyDetailPage> {
       child: ListTile(
         title: Text(
           title,
-          style: TextStyle(color: Colors.purple), // Titre en violet
+          style: TextStyle(color: Colors.black), // Titre en violet
         ),
         trailing: isButton
             ? TextButton(
@@ -253,7 +254,7 @@ class _PropertyDetailPageState extends State<PropertyDetailPage> {
           children: [
             // Logo "imocam" stylisé en violet
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(2),
               child: Text(
                 'imocam',
                 style: TextStyle(
