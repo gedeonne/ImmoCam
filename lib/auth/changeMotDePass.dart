@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'neumorphismTextField.dart';
+import '../widgets/neumorphismTextField.dart';
 
 
 class ChangePasswordPage extends StatefulWidget {

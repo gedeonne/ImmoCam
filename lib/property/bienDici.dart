@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'Cart.dart';
-import 'menuBurger.dart';
+import '../widgets/Cart.dart';
+import '../drawer/menuBurger.dart';
 
 
 class RealEstatePage extends StatelessWidget {
